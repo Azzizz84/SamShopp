@@ -1,0 +1,276 @@
+{
+    "intro": {
+        "intro_title1": "Expert People",
+        "intro_description1": "We provide the best services with the best service providers to perform tasks",
+        "intro_title2": "Fast Delivery",
+        "intro_description2": "Your purchases reach you in the fastest time",
+        "intro_title3": "Best Services",
+        "intro_description3": "You get the best services at the cheapest prices"
+    },
+    "global": {
+        "hi": "Hello ...!",
+        "welcome": "Enter your registered information to complete the login process",
+        "and": " and ",
+        "new": "New",
+        "cash": "Cash",
+        "visa": "Bank Card",
+        "wallet": "Wallet",
+        "new_order": "New Order",
+        "add_image": "Add Image",
+        "add_video": "Add Video",
+        "delete_image": "Click to delete image",
+        "video": "Video",
+        "now": "Now",
+        "add_order_image": "Add Order Image",
+        "change_camera": "Change Camera",
+        "filter": "Filter",
+        "from": "From",
+        "to": "To",
+        "day": "Day",
+        "loading": "Loading",
+        "categories": "Categories",
+        "sar": "SAR",
+        "sub_total": "Subtotal",
+        "delivery_fee": "Delivery Fee",
+        "tax": "Tax",
+        "total": "Total",
+        "all": "All",
+        "new_update": "There is a new version",
+        "ago": "ago",
+        "year": "Year",
+        "month": "Month",
+        "hour": "Hour",
+        "minute": "Minute",
+        "sec": "Second",
+        "open_gps": "Please enable location service",
+        "open_gps_settings": "Please enable location service",
+        "online": "Online",
+        "offline": "Offline",
+        "user_status": "User Status",
+        "share_description": "⭐ Get your services and needs easily! 🛠🛒 Our app combines the best services and enjoyable shopping in one place. 🌟"
+    },
+    "login": {
+        "login": "Login",
+        "forget_password": "Forgot Password?",
+        "no_account": "Don't have an account? ",
+        "register": "Register",
+        "have_account": "Have an account",
+        "must_login": "You must login first"
+    },
+    "register": {
+        "register": "Register",
+        "upload_profile_image": "Add Profile Picture",
+        "terms1": "By continuing, you agree to the ",
+        "terms2": " of the application"
+    },
+    "check_phone": {
+        "enter_phone": "Enter the phone number registered in the account to retrieve the password",
+        "forget_password": "Retrieve Password"
+    },
+    "change_pass": {
+        "change_pass": "Change Password",
+        "forget_password": "Retrieve Password"
+    },
+    "otp": {
+        "resend": "Resend Code",
+        "otp": "Two-factor Authentication"
+    },
+    "main": {
+        "home": "Home",
+        "orders": "Orders",
+        "markets": "Markets",
+        "settings": "Settings",
+        "notification": "Notifications",
+        "exit": "Do you want to exit the application?",
+        "confirm_orders": "Confirmed Orders",
+        "ended_orders": "Ended Orders",
+        "support": "Support",
+        "logout": "Logout"
+    },
+    "chat": {
+        "chat": "Chat"
+    },
+    "home": {
+        "banners": "Best Offers",
+        "categories": "Categories"
+    },
+    "service_order": {
+        "order_notes": "Order Details",
+        "deposit": "Deposit",
+        "chat_with_user": "Chat with User",
+        "call_with_user": "Contact User",
+        "paid": "Paid",
+        "unpaid": "Unpaid",
+        "directions": "Directions",
+        "end_order": "Upload photos of completing the order and solving the problem"
+    },
+    "wallet": {
+        "wallet": "Wallet",
+        "balance": "Balance",
+        "charge": "Charge Balance",
+        "add_visa_balance": "Add Balance via Card",
+        "charge_wallet": "Charge Wallet Now",
+        "number_error": "Must be a valid number"
+    },
+    "market": {
+        "menu": "Menu",
+        "information": "Information",
+        "comments": "Comments",
+        "working_hours": "Working Hours",
+        "phone_number": "Phone Number",
+        "your_comment": "Your Comment",
+        "close": "Closed",
+        "location": "Restaurant Address",
+        "product_details": "Product Details"
+    },
+    "order_status": {
+        "new": "New Order",
+        "in_progress": "In Progress",
+        "preparing": "Preparing",
+        "delivery": "In Delivery",
+        "service_provider_finish": "Completed by Customer",
+        "complete": "Complete",
+        "canceled": "Canceled"
+    },
+    "order_status_buttons": {
+        "all": "All",
+        "new_order": "New",
+        "progress": "Current",
+        "complete": "Complete",
+        "canceled": "Canceled"
+    },
+    "address": {
+        "my_address": "My Address",
+        "address_details": "Address Details",
+        "delivery_location": "Delivery Location",
+        "delete_address": "Delete Address",
+        "add_new_address": "Add New Address"
+    },
+    "order": {
+        "orders": "Orders",
+        "order_status": "Order Status",
+        "order_id": "Order Number",
+        "order_details": "Order Details",
+        "address": "Order Address",
+        "order_date": "Order Date",
+        "payment_method": "Payment Method",
+        "order_note": "Order Details",
+        "total": "Total Price",
+        "deposit_value": "Deposit Value",
+        "order_images": "Order Images",
+        "finish_order_images": "Final Order Images",
+        "new_orders": "New Orders"
+    },
+    "settings": {
+        "settings": "Settings",
+        "replay": "We Replay your request in 2 work days",
+        "terms": "Policy and Privacy",
+        "about": "About Us",
+        "privacy": "Terms and Conditions",
+        "profile": "Profile",
+        "password": "Change Password",
+        "logout": "Logout",
+        "delete_account": "Delete Account",
+        "wallet": "Wallet",
+        "my_address": "My Addresses",
+        "contact_us": "Contact Us",
+        "language": "Language",
+        "share": "Share App"
+    },
+    "inputs": {
+        "phone": "Phone Number",
+        "password": "Password",
+        "name": "Name",
+        "email": "Email",
+        "confirm_password": "Confirm Password",
+        "pick": "Choose Image",
+        "camera": "Camera",
+        "photo": "Gallery",
+        "category_search": "Search for Category",
+        "choose_sub_category": "Choose Subcategory",
+        "choose_appointment": "Choose Appointment",
+        "order_details": "Order Details",
+        "address_title": "Address Title",
+        "recipient_name": "Recipient Name",
+        "recipient_phone": "Recipient Phone",
+        "address_description": "Address Description",
+        "choose_city": "Choose City",
+        "choose_time": "example: : 2024/1/1  14:20",
+        "pick_video": "Choose Video",
+        "market_search": "Search in Markets",
+        "choose_category": "Choose Category",
+        "note": "Notes",
+        "title": "Title",
+        "i_have_question": "I have a question about the app",
+        "message": "Message",
+        "description_hint": "Example : I understand your problem and can solve it perfectly",
+        "price": "Price",
+        "deposit": "A deposit, if any (optional)"
+    },
+    "upload": {
+        "upload_image": "Upload up to *input* images"
+    },
+    "cart": {
+        "cart": "Cart",
+        "check_out": "Checkout",
+        "payment": "Payment",
+        "payment_method": "Payment Method",
+        "delete_cart": "Your cart will be deleted"
+    },
+    "buttons": {
+        "skip": "Skip",
+        "next": "Next",
+        "login": "Login",
+        "register": "Register",
+        "guest_login": "Guest Login",
+        "send": "Send",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "add_address": "Add Address",
+        "save_address": "Save Address",
+        "confirm_location": "Confirm Location",
+        "add_cart": "Add to Cart",
+        "check_out": "Checkout",
+        "create_order": "Create Order",
+        "service_orders": "Service Orders",
+        "market_orders": "Market Orders",
+        "save": "Save",
+        "refuse_offer": "Reject Offer",
+        "accept_offer": "Accept Offer",
+        "pay": "Pay",
+        "cancel_order": "Cancel Order",
+        "end_order": "Finish the order",
+        "charge": "Charge Balance",
+        "logout": "Logout",
+        "delete_account": "Delete Account",
+        "update": "Update",
+        "add_offer": "Add Offer",
+        "call": "Call: *input*",
+        "whatsapp": "Contact Via Whatsapp"
+    },
+    "validation": {
+        "password": "Password does not match",
+        "field": "This field is required",
+        "video_limit": "Video duration should not exceed *input* minutes",
+        "access_camera": "Please allow access to the camera",
+        "pay_field": "Payment failed, please try again later"
+    },
+    "success": {
+        "success": "Operation Successful",
+        "create_order": "Order created successfully"
+    },
+    "empty": {
+        "notification": "No notifications at the moment",
+        "categories": "No categories at the moment",
+        "orders": "No orders at the moment",
+        "markets": "No markets at the moment",
+        "address": "No addresses at the moment",
+        "cart": "The cart is empty, browse the app and purchase what you like",
+        "offers": "No offers at the moment"
+    },
+    "error": {
+        "location": "Error in obtaining the current location",
+        "two_branches": "Cannot order from different branches at the same time",
+        "wallet": "Order amount is greater than wallet balance. Please charge the wallet first"
+    }
+}

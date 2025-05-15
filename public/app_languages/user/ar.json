@@ -1,0 +1,289 @@
+{
+    "intro": {
+        "intro_title1": "الناس الخبراء",
+        "intro_description1": "نفدم افضل الخدمات بافضل مزودي الخدمات لاداء المهام",
+        "intro_title2": "النقل السريع",
+        "intro_description2": "تصلك مشترياتك باسرع وقت",
+        "intro_title3": "افضل الخدمات",
+        "intro_description3": "تحصل على افضل الخدمات و ارخصها"
+    },
+    "global": {
+        "hi": "اهلا بك ...!",
+        "welcome": "ادخل بياناتك المسجلة لإتمام عملية الدخول",
+        "and": " و ",
+        "new": "جديد",
+        "cash": "نقدي",
+        "visa": "بطاقة بنكية",
+        "wallet": "المحفظة",
+        "new_order": "طلب جديد",
+        "add_image": "اضف صورة",
+        "add_video": "اضف فيديو",
+        "delete_image": "اضغط لحذف الصورة",
+        "video": "فيديو",
+        "now": "الان",
+        "add_order_image": "اضف صورة للطلب",
+        "change_camera": "تغيير الكاميرا",
+        "filter": "تصفية",
+        "from": "من",
+        "to": "الي",
+        "day": "اليوم",
+        "loading": "جاري التحميل",
+        "categories": "الاقسام",
+        "sar": "ر.س",
+        "sub_total": "المجموع الفرعي",
+        "delivery_fee": "رسوم التوصيل",
+        "tax": "الضريبة",
+        "total": "الإجمالي",
+        "all": "الكل",
+        "new_update": "هناك اصدار جديد",
+        "ago": "منذ",
+        "year": "سنة",
+        "month": "شهر",
+        "hour": "ساعة",
+        "minute": "دقيقة",
+        "sec": "ثانيه",
+        "open_gps": "الرجاء فتح خدمة الموقع",
+        "open_gps_settings": "الرجاء فتح خدمة الموقع",
+        "closed": "مغلق",
+        "market_closed": "المتجر مغلق",
+        "payment": "الدفع",
+        "see_all": "عرض الكل",
+        "share_description": "⭐\uFE0F احصل على خدماتك واحتياجاتك بسهولة! \uD83D\uDEE0\uFE0F\uD83D\uDED2 تطبيقنا يجمع بين أفضل الخدمات والتسوق الممتع في مكان واحد. \uD83C\uDF1F"
+    },
+    "login": {
+        "login": "تسجيل الدخول",
+        "forget_password": "نسيت كلمة المرور ؟",
+        "no_account": "لا تملك حساب؟ ",
+        "register": "انشاء حساب",
+        "have_account": "تملك حساب ",
+        "must_login": "يجب عليك تسجيل الدخول اولا"
+    },
+    "register": {
+        "register": "انشاء حساب",
+        "upload_profile_image": "اضف صورة شخصية",
+        "terms1": "بمواصلتك، فإنك توافق على ",
+        "terms2": " الخاصة بـالتطبيق"
+    },
+    "check_phone": {
+        "enter_phone": "ادخل رقم الجوال المسجل في الحساب لل استعاده كلمه السر",
+        "forget_password": "استعادة كلمة المرور"
+    },
+    "change_pass": {
+        "change_pass": "تغيير كلمة المرور",
+        "forget_password": "استعادة كلمة المرور"
+    },
+    "otp": {
+        "resend": "اعادة ارسال الرمز",
+        "otp": "المصادقة الثنائية"
+    },
+    "main": {
+        "home": "الرئيسية",
+        "orders": "طلباتي",
+        "markets": "المتاجر",
+        "settings": "الاعدادات",
+        "notification": "الاشعارات",
+        "exit": "هل تريد الخروج من التطبيق",
+        "logout": "خروج"
+    },
+    "chat": {
+        "chat": "الدردشة"
+    },
+    "home": {
+        "banners": "افضل العروض ",
+        "categories": "الاقسام",
+        "category_market": "اقسام السوق",
+        "app_services": "خدمات عمارة"
+    },
+    "service": {
+        "accept_deposit": "يقبل عربون",
+        "service_details": "تفاصيل الخدمة",
+        "order": "برجاء التواصل بخصوص طلبي الجديد"
+    },
+    "service_order": {
+        "order_notes": "تفاصيل الطلب",
+        "deposit": "العربون",
+        "chat_with_service_provider": "دردش مع الفني",
+        "call_with_service_provider": "تواصل مع الفني",
+        "pay_deposit": "ادفع العربون",
+        "pay": "ادفع"
+    },
+    "wallet": {
+        "wallet": "المحفظة",
+        "balance": "الرصيد",
+        "charge": "شحن الرصيد",
+        "add_visa_balance": "إضافة رصيد عبر بطاقة",
+        "charge_wallet": "شحن المحفظة الآن",
+        "number_error": "يجب أن يكون رقمًا صالحًا"
+    },
+    "market": {
+        "menu": "القائمة",
+        "information": "معلومات",
+        "comments": "التعليقات",
+        "working_hours": "ساعات العمل",
+        "phone_number": "رقم الهاتف",
+        "your_comment": "تعليقك",
+        "close": "مغلق",
+        "location": "عنوان المطعم",
+        "product_details": "تفاصيل المنتج",
+        "nearest_market": "المطاعم القريبة"
+    },
+    "order_status": {
+        "new": "طلب جديد",
+        "in_progress": "قيد التنفيذ",
+        "preparing": "جاري التجهيز",
+        "delivery": "جاري التوصيل",
+        "service_provider_finish": "تم الانتهاء من قبل مزود الخدمة",
+        "complete": "مكتمل",
+        "canceled": "تم الغاء الطلب"
+    },
+    "order_status_buttons": {
+        "all": "الكل",
+        "new_order": "جديد",
+        "progress": "الحالي",
+        "complete": "مكتمل",
+        "canceled": "ملغي"
+    },
+    "address": {
+        "my_address": "عنواني",
+        "address_details": "تفاصيل العنوان",
+        "delivery_location": "موقع التوصيل",
+        "delete_address": "حذف العنوان",
+        "add_new_address": "اضف عنوان جديد"
+    },
+    "order": {
+        "orders": "طلباتي",
+        "order_status": "حالة الطلب",
+        "order_id": "رقم الطلب",
+        "order_details": "تفاصيل الطلب",
+        "address": "عنوان الطلب",
+        "order_date": "تاريخ الطلب",
+        "payment_method": "طريقة الدفع",
+        "order_note": "تفاصيل الطلب",
+        "total": "السعر الاجمالي",
+        "deposit_value": "عربون بقيمة",
+        "order_images": "صور الطلب",
+        "finish_order_images": "صور الطلب النهائي"
+    },
+    "settings": {
+        "settings": "الاعدادات",
+        "replay": "يتم الرد خلال يومين عمل",
+        "terms": "السياسة و الخصوصية",
+        "about": "من نحن",
+        "privacy": "الشروط و الاحكام",
+        "profile": "الملف الشخصي",
+        "password": "تغيير كلمة المرور",
+        "logout": "تسجيل خروج",
+        "delete_account": "حذف الحساب",
+        "wallet": "المحفظة",
+        "my_address": "عناويني",
+        "contact_us": "تواصل معنا",
+        "language": "اللغة",
+        "share": "مشاركة التطبيق",
+        "return": "سياسة الاسترجاع"
+    },
+    "inputs": {
+        "phone": "رقم الهاتف",
+        "password": "كلمة المرور",
+        "name": "الاسم",
+        "email": "البريد الالكتروني",
+        "confirm_password": "تاكيد كلمة المرور",
+        "pick": "اختيار صورة",
+        "camera": "الكاميرا",
+        "photo": "المعرض",
+        "category_search": "ابحث عن قسم",
+        "choose_sub_category": "اختيار فئة فرعية",
+        "choose_appointment": "اختيار موعد",
+        "order_details": "تفاصيل الطلب",
+        "address_title": "اسم العنوان",
+        "recipient_name": "اسم المستلم",
+        "recipient_phone": "هاتف المستلم",
+        "address_description": "وصف العنوان",
+        "choose_city": "اختيار المدينة",
+        "pick_video": "اختيار فيديو",
+        "market_search": "ابحث في المتاجر",
+        "choose_category": "اختيار القسم",
+        "note": "ملاحظات",
+        "notes": "ملاحظات",
+        "title": "العنوان",
+        "i_have_question": "اريد استفسار عن التطبيق",
+        "message": "الرسالة"
+    },
+    "upload": {
+        "upload_image": "قم بتحميل ما يصل الي *input* صوره"
+    },
+
+    "cart": {
+        "cart": "السلة",
+        "check_out": "الدفع",
+        "payment": "الدفع",
+        "payment_method": "طريقة الدفع",
+        "delete_cart": "سيتم حذف عربتك"
+    },
+    "buttons": {
+        "skip": "تخطي",
+        "next": "التالي",
+        "login": "تسجيل الدخول",
+        "register": "تسجيل جديد",
+        "guest_login": "تسجيل كزائر",
+        "send": "ارسال",
+        "cancel": "الغاء",
+        "confirm": "تأكيد",
+        "add_address": "إضافة عنوان",
+        "save_address": "حفظ العنوان",
+        "confirm_location": "تأكيد الموقع",
+        "add_cart": "إضافة إلى السلة",
+        "check_out": "الدفع",
+        "create_order": "انشاء الطلب",
+        "service_orders": "طلبات الخدمة",
+        "market_orders": "طلبات المتاجر",
+        "save": "حفظ",
+        "refuse_offer": "رفض العرض",
+        "accept_offer": "قبول العرض",
+        "pay": "ادفع",
+        "cancel_order": "الغاء الطلب",
+        "end_order": "انهاء و استلام الطلب",
+        "charge": "شحن رصيد",
+        "logout": "تسجيل الخروج",
+        "delete_account": "حذف الحساب",
+        "update": "تحديث",
+        "call": "اتصل: *input*",
+        "whatsapp": "تواصل عن طريق الواتساب",
+        "service_order": "اطلب الخدمة",
+        "app_services": "خدمات التطبيق",
+        "order_via_whatsapp": "اطلب عن طريق واتساب",
+        "public_markets": "المتاجر العامة",
+        "app_markets": "متاجر جملة"
+    },
+    "validation": {
+        "password": "كلمة المرور غير متطابقة",
+        "field": "هذا الحقل مطلوب",
+        "video_limit": "يجب ان لا تزيد مدة الفيديو عن *input* دقائق",
+        "access_camera": "برجاء السماح بالوصول للكاميرا",
+        "pay_field": "فشلت عملية الدفع الرجاء المحاولة لاحقا",
+        "choose_address": "برجاء اختيار عنوان",
+        "same_city": "المتجر متواجد في منطقة *input* يجب تحديد عنوان داخل *input*",
+        "print": "طباعة"
+    },
+    "success": {
+        "success": "تمت العملية بنجاح",
+        "create_order": "تم انشاء الطلب بنجاح",
+        "wallet": "تم شحن رصيد بنجاح",
+        "receipt_saved": "تم حقظ الفاتورة"
+    },
+    "empty": {
+        "notification": "لا توجد اشعارات في الوقت الحالي",
+        "categories": "لا توجد اقسام في الوقت الحالي",
+        "orders": "لا توجد طلبات في الوقت الحالي",
+        "markets": "لا توجد متاجر في الوقت الحالي",
+        "address": "لا توجد عناوين في الوقت الحالي",
+        "cart": "السلة فارغة تصفح التطبيق وقم بشراء ما يعجبك",
+        "offers": "لا توجد عروض في الوقت الحالي",
+        "services": "لا توجد خدمات في الوقت الحالي"
+    },
+    "error": {
+        "location": "خطأ في الحصول على الموقع الحالي",
+        "two_branches": "لا يمكن طلب من فروع مختلفة في نفس الوقت",
+        "wallet": "رصيد الطلب أكبر من رصيد المحفظة. الرجاء شحن المحفظة أولاً",
+        "error": "حدث خطأ ما"
+    }
+}

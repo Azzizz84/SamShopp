@@ -6,7 +6,7 @@ trait  SmsTrait
 {
     function sendOtp($phone,$message)
     {
-        $phone = "966".$phone;
+        $phone = "967".$phone;
          $curl = curl_init();
 
          curl_setopt_array($curl, array(

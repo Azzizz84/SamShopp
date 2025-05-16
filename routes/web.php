@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-    //return redirect('https://market.amaraapp.com.sa/');
+    //return view('welcome');
+    return redirect('https://market.amaraapp.com.sa/');
 });
 
 

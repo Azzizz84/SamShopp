@@ -22,7 +22,10 @@ class CheckPhoneRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            'phone'=>'required|numeric|exists:users',
+            'phone' => [
+            'required',
+            'regex:/^(\+967|967|0)?[1-9]\d{8}$/' // Accepts: +967XXXXXXX, 967XXXXXXX, 0XXXXXXX
+        ]
         ];
     }
     public function messages()

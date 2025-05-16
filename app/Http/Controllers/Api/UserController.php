@@ -61,9 +61,26 @@ class UserController extends Controller
         return  $this->apiResponse($user,'success','simple');
     }
     public function can_register(CanRegisterRequest $request){
-        $code = $this->send_code($request->phone);
-        return  $this->apiResponse($code,'success','simple');
+         $phone = $this->formatYemeniNumber($request->phone);
+    $code = $this->send_code($phone);
+    return $this->apiResponse($code, 'success', 'simple');
     }
+    private function formatYemeniNumber($phone)
+{
+    $phone = preg_replace('/[^0-9+]/', '', $phone);
+    
+    // Convert formats to +967XXXXXXXXX
+    if (str_starts_with($phone, '0')) {
+        return '+967' . substr($phone, 1);
+    } elseif (str_starts_with($phone, '967')) {
+        return '+' . $phone;
+    } elseif (!str_starts_with($phone, '+967')) {
+        return '+967' . $phone;
+    }
+    
+    return $phone; // Already in +967 format
+}
+
     public function check_phone(CheckPhoneRequest $request){
         $user = User::where('phone',$request->phone)->first();
         $code = $this->send_code($request->phone);

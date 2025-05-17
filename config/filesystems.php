@@ -35,6 +35,13 @@ return [
             'root' => storage_path('app'),
             'throw' => false,
         ],
+
+        'railway' => [
+        'driver' => 'local',
+        'root' => '/data/uploads',
+        'url' => env('APP_URL').'/storage',
+        'visibility' => 'public',
+        ],
  
         'public' => [
             'driver' => 'local',

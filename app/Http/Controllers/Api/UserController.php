@@ -23,6 +23,7 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Http\Requests\Api\User\CheckEmailRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\OtpMail;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -188,13 +189,16 @@ class UserController extends Controller
         
         if($request->hasFile('image')){
             try {
+
             $user = User::find(userApi()->id);
-            if($user->image){
-                $user->deleteUserImage();
-            }
-            $image = $this->addImage($request->image,'users');
-            $user->image = $image;
+            if ($user->image) {
+            Storage::disk('railway')->delete($user->image);
+             }
+
+            $imagePath = $this->addImage($request->image, 'users');
+            $user->image = $imagePath;
             $user->save();
+
              } catch (\Exception $e) {
                 \Log::error('Image upload failed: ' . $e->getMessage());
                 return $this->apiResponse('Image upload failed', 'error', 'simple', 500);

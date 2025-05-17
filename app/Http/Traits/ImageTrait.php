@@ -17,15 +17,23 @@ Trait  ImageTrait
     }
 
     function addImage($image,$folder,$oldImage = null) :String{
+
         if($oldImage){
             $this->deleteImage($oldImage,$folder);
         }
+        
+        // Ensure directory exists
+    $path = public_path('images/'.$folder);
+    if (!File::exists($path)) {
+        File::makeDirectory($path, 0755, true);
+    }
         $extension = $image->extension();
         $time = intval(microtime(true) * 1000000);
         $fileName = $time.'_'.$folder.'.'.$extension;
         $image->move(public_path('images/'.$folder),$fileName);
         return $fileName;
     }
+
     function deleteImage($image,$folder){
 
         $path =strstr($image,"images/".$folder);

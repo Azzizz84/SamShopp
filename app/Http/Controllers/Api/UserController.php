@@ -166,33 +166,57 @@ class UserController extends Controller
         return $this->apiResponse('success','success','simple');
     }
 
-    public function update_profile(Request $request){
-        if(isset($request->phone)){
-            $count = User::where('id','!=',userApi()->id)->where('phone',$request->phone)->count();
-            if($count>0){
-                return $this->apiResponse(__('validation.unique_phone'),__('validation.unique_phone'),'simple',500);
-            }
+    public function update_profile(Request $request)
+{
+    // Phone validation (if still needed)
+    if (isset($request->phone)) {
+        $count = User::where('id', '!=', userApi()->id)
+                   ->where('phone', $request->phone)
+                   ->count();
+        if ($count > 0) {
+            return $this->apiResponse(
+                __('validation.unique_phone'),
+                __('validation.unique_phone'),
+                'simple',
+                500
+            );
         }
-        if(isset($request->email)){
-            $count = User::where('id','!=',userApi()->id)->where('email',$request->email)->count();
-            if($count>0){
-                return $this->apiResponse(__('validation.unique_email'),__('validation.unique_email'),'simple',500);
-            }
-        }
-        $data = $request->except('image');
-        $user = userApi();
-
-        $user->update($data);
-        if($request->hasFile('image')){
-            $user = User::find(userApi()->id);
-            if($user->image){
-                $user->deleteUserImage();
-            }
-            $image = $this->addImage($request->image,'users');
-            $user->image = $image;
-            $user->save();
-        }
-        $user = User::where('id',userApi()->id)->first();
-        return  $this->apiResponse($user,'success','simple');
     }
+
+    // Email validation
+    if (isset($request->email)) {
+        $count = User::where('id', '!=', userApi()->id)
+                   ->where('email', $request->email)
+                   ->count();
+        if ($count > 0) {
+            return $this->apiResponse(
+                __('validation.unique_email'),
+                __('validation.unique_email'),
+                'simple',
+                500
+            );
+        }
+    }
+
+    $data = $request->except('image');
+    $user = userApi();
+    $user->update($data);
+
+    if ($request->hasFile('image')) {
+        $user = User::find(userApi()->id);
+        
+        // Delete old image if exists
+        if ($user->image) {
+            $this->deleteImage($user->image, 'users');
+        }
+
+        // Upload new image to S3
+        $fileName = $this->addImage($request->file('image'), 'users');
+        $user->image = $fileName;
+        $user->save();
+    }
+
+    $user = User::where('id', userApi()->id)->first();
+    return $this->apiResponse($user, 'success', 'simple');
+}
 }

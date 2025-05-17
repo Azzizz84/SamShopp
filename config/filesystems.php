@@ -1,75 +1,50 @@
 <?php
 
-return [
+namespace App\Http\Traits;
 
-    /*
-    |--------------------------------------------------------------------------
-    | Default Filesystem Disk
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify the default filesystem disk that should be used
-    | by the framework. The "local" disk, as well as a variety of cloud
-    | based disks are available to your application. Just store away!
-    |
-    */
+use Illuminate\Support\Facades\Storage;
 
-    'default' => env('FILESYSTEM_DISK', 'local'),
+trait ImageTrait
+{
+    function getImageUrl($value, $folder)
+    {
+        if ($value) {
+            // Check if the image exists in S3
+            if (Storage::disk('s3')->exists("$folder/$value")) {
+                return Storage::disk('s3')->url("$folder/$value");
+            }
+            return url('images/place_holder/default.png');
+        }
+        return url('images/place_holder/default.png');
+    }
 
-    /*
-    |--------------------------------------------------------------------------
-    | Filesystem Disks
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure as many filesystem "disks" as you wish, and you
-    | may even configure multiple disks of the same driver. Defaults have
-    | been set up for each driver as an example of the required values.
-    |
-    | Supported Drivers: "local", "ftp", "sftp", "s3"
-    |
-    */
+    function addImage($image, $folder, $oldImage = null): string
+    {
+        // Delete old image if exists
+        if ($oldImage) {
+            $this->deleteImage($oldImage, $folder);
+        }
 
-    'disks' => [
+        // Generate unique filename
+        $extension = $image->extension();
+        $fileName = time().'_'.uniqid().'_'.$folder.'.'.$extension;
 
-        'local' => [
-            'driver' => 'local',
-            'root' => storage_path('app'),
-            'throw' => false,
-        ],
- 
-        'public' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
-        ],
+        // Store in S3
+        $path = Storage::disk('s3')->putFileAs(
+            $folder,
+            $image,
+            $fileName,
+            'public' // Make the file publicly accessible
+        );
 
-        's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
-            'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
-            'throw' => false,
-        ],
+        return $fileName;
+    }
 
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Symbolic Links
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the symbolic links that will be created when the
-    | `storage:link` Artisan command is executed. The array keys should be
-    | the locations of the links and the values should be their targets.
-    |
-    */
-
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
-    ],
-
-];
+    function deleteImage($image, $folder)
+    {
+        // Delete from S3
+        if (Storage::disk('s3')->exists("$folder/$image")) {
+            Storage::disk('s3')->delete("$folder/$image");
+        }
+    }
+}

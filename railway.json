@@ -1,0 +1,7 @@
+{
+  "build": {
+    "commands": [
+      "ln -sfn /data/uploads public/storage"
+    ]
+  }
+}

@@ -182,8 +182,10 @@ class UserController extends Controller
                 return $this->apiResponse(__('validation.unique_email'),__('validation.unique_email'),'simple',500);
             }
         }
-        $data = $request->except('image');
-        $user = userApi();
+
+         $user = userApi();
+         $data = $request->except('image');
+       
 
         $user->update($data);
         

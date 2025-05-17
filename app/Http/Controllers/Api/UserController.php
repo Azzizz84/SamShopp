@@ -169,7 +169,7 @@ class UserController extends Controller
 
      public function update_profile(Request $request)
 {
-    try {
+    
         // Validation
         if (isset($request->phone)) {
             $count = User::where('id', '!=', userApi()->id)
@@ -194,7 +194,7 @@ class UserController extends Controller
         $user->update($data);
         
         if ($request->hasFile('image')) {
-            try {
+        
                 if ($user->image) {
                     // Use the trait's delete method
                     $this->deleteImage($user->image);
@@ -204,17 +204,11 @@ class UserController extends Controller
                 $user->image = $imagePath;
                 $user->save();
                 
-            } catch (\Exception $e) {
-                \Log::error('Image upload failed: ' . $e->getMessage());
-                return $this->apiResponse('Image upload failed: ' . $e->getMessage(), 'error', 'simple', 500);
-            }
+            
         }
         
         return $this->apiResponse($user->fresh(), 'success', 'simple');
 
-    } catch (\Exception $e) {
-        \Log::error('Profile update failed: ' . $e->getMessage());
-        return $this->apiResponse('Profile update failed: ' . $e->getMessage(), 'error', 'simple', 500);
-    }
+    
 }
 }

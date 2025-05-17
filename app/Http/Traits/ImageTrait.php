@@ -4,6 +4,7 @@ namespace App\Http\Traits;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 Trait  ImageTrait
 {

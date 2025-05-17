@@ -167,51 +167,54 @@ class UserController extends Controller
         return $this->apiResponse('success','success','simple');
     }
 
-     public function update_profile(Request $request){
-
-        try{
-        if(isset($request->phone)){
-            $count = User::where('id','!=',userApi()->id)->where('phone',$request->phone)->count();
-            if($count>0){
-                return $this->apiResponse(__('validation.unique_phone'),__('validation.unique_phone'),'simple',500);
-            }
-        }
-        if(isset($request->email)){
-            $count = User::where('id','!=',userApi()->id)->where('email',$request->email)->count();
-            if($count>0){
-                return $this->apiResponse(__('validation.unique_email'),__('validation.unique_email'),'simple',500);
+     public function update_profile(Request $request)
+{
+    try {
+        // Validation
+        if (isset($request->phone)) {
+            $count = User::where('id', '!=', userApi()->id)
+                      ->where('phone', $request->phone)
+                      ->count();
+            if ($count > 0) {
+                return $this->apiResponse(__('validation.unique_phone'), __('validation.unique_phone'), 'simple', 500);
             }
         }
 
-         $user = userApi();
-         $data = $request->except('image');
-       
+        if (isset($request->email)) {
+            $count = User::where('id', '!=', userApi()->id)
+                      ->where('email', $request->email)
+                      ->count();
+            if ($count > 0) {
+                return $this->apiResponse(__('validation.unique_email'), __('validation.unique_email'), 'simple', 500);
+            }
+        }
 
+        $user = userApi();
+        $data = $request->except('image');
         $user->update($data);
         
-        if($request->hasFile('image')){
+        if ($request->hasFile('image')) {
             try {
-
-            $user = User::find(userApi()->id);
-            if ($user->image) {
-            Storage::disk('railway')->delete($user->image);
-             }
-
-            $imagePath = $this->addImage($request->image, 'users');
-            $user->image = $imagePath;
-            $user->save();
-
-             } catch (\Exception $e) {
+                if ($user->image) {
+                    // Use the trait's delete method
+                    $this->deleteImage($user->image);
+                }
+                
+                $imagePath = $this->addImage($request->file('image'), 'users');
+                $user->image = $imagePath;
+                $user->save();
+                
+            } catch (\Exception $e) {
                 \Log::error('Image upload failed: ' . $e->getMessage());
-                return $this->apiResponse('Image upload failed', 'error', 'simple', 500);
+                return $this->apiResponse('Image upload failed: ' . $e->getMessage(), 'error', 'simple', 500);
             }
         }
-        $user = User::where('id',userApi()->id)->first();
-        return  $this->apiResponse($user,'success','simple');
+        
+        return $this->apiResponse($user->fresh(), 'success', 'simple');
 
-        } catch (\Exception $e) {
+    } catch (\Exception $e) {
         \Log::error('Profile update failed: ' . $e->getMessage());
-        return $this->apiResponse('Profile update failed', 'error', 'simple', 500);
+        return $this->apiResponse('Profile update failed: ' . $e->getMessage(), 'error', 'simple', 500);
     }
-    }
+}
 }

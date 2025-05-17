@@ -7,18 +7,18 @@ use Illuminate\Support\Facades\Storage;
 
 trait ImageTrait
 {
-  function getImageUrl($value, $folder)
-{
-    if ($value) {
-        // For images stored in public storage
-        if (Storage::disk('public')->exists('temp_images/'.$value)) {
-            return Storage::disk('public')->url('temp_images/'.$value);
+    function getImageUrl($value, $folder)
+    {
+        if($value) {
+            // Check if using temporary storage
+            if (Storage::disk('public')->exists('temp_images/'.$value)) {
+                return Storage::disk('public')->url('temp_images/'.$value);
+            }
+            return url('images/'.$folder.'/'.$value);
+        } else {
+            return url('images/place_holder/default.png');
         }
-        // For older images (if any)
-        return url('storage/images/'.$folder.'/'.$value);
     }
-    return url('images/place_holder/default.png');
-}
 
     function addImage($image, $folder, $oldImage = null): String
     {

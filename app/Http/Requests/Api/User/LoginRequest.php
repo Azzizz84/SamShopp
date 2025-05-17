@@ -22,7 +22,7 @@ class LoginRequest extends BaseRequest
     public function rules(): array
     {
         return [
-            'phone'=>'required|numeric',
+            'email'=>'required',
             'password'=>'required|min:6',
 //            'token'=>'required',
         ];
